@@ -1,13 +1,19 @@
 {
   "name": "booking-app",
   "version": "1.0.0",
-  "description": "Simple booking system - runs locally on Windows",
+  "description": "Simple booking system",
   "main": "server.js",
+  "bin": "server.js",
   "scripts": {
     "start": "node server.js"
   },
   "dependencies": {
     "express": "^4.19.2",
     "sql.js": "^1.11.0"
+  },
+  "pkg": {
+    "assets": [
+      "node_modules/sql.js/dist/sql-wasm.wasm"
+    ]
   }
 }
